@@ -8,7 +8,7 @@ const nextConfig = {
   
   
   // 1. Movemos outputFileTracingRoot fuera de experimental (según la advertencia)
-  outputFileTracingRoot: path.join(__dirname, '../'),
+  //outputFileTracingRoot: path.join(__dirname, '../'),
 
   // 2. Agregamos esto para silenciar el error de Turbopack
   turbopack: {},
