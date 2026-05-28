@@ -6,6 +6,7 @@ const nextConfig = {
   output: process.env.NEXT_OUTPUT_MODE,
   productionBrowserSourceMaps: false,
   
+  
   // 1. Movemos outputFileTracingRoot fuera de experimental (según la advertencia)
   outputFileTracingRoot: path.join(__dirname, '../'),
 
