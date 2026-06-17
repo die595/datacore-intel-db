@@ -13,7 +13,7 @@ const COLORS = ['#FF4444', '#00D9FF', '#FF9149', '#FF90BB', '#80D8C3', '#A19AD3'
 function ChartCard({
   title,
   children,
-  minHeight = 10
+  minHeight = 2
 }: {
   title: string;
   children: React.ReactNode;
@@ -143,10 +143,10 @@ export default function ChartsPanel() {
       <ChartCard title="Análisis Radar Fenómenos" minHeight={280}>
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={data.fenomenoRadar} cx="50%" cy="50%" outerRadius={65}>
-            <PolarGrid stroke="#ffd700" />
+            <PolarGrid stroke="#ff0048" />
             <PolarAngleAxis dataKey="name" tick={{ fontSize: 9, fill: '#94a3b8' }} />
             <PolarRadiusAxis tick={{ fontSize: 7, fill: '#64748b' }} />
-            <Radar name="Casos" dataKey="value" stroke="#00D9FF" fill="#00D9FF" fillOpacity={0.3} />
+            <Radar name="Casos" dataKey="value" stroke="#ff0000" fill="#00D9FF" fillOpacity={0.3} />
             <Tooltip contentStyle={{ background: '#111827', border: '1px solid rgba(0,217,255,0.3)', borderRadius: 8, fontSize: 10 }} />
           </RadarChart>
         </ResponsiveContainer>
@@ -159,8 +159,8 @@ export default function ChartsPanel() {
             <LineChart data={data.timeline} margin={{ left: 5, right: 5, top: 0, bottom: 15 }}>
               <XAxis dataKey="name" tick={{ fontSize: 8, fill: '#94a3b8' } as any} tickLine={false} height={35} interval="preserveStartEnd" angle={-45} />
               <YAxis tick={{ fontSize: 9, fill: '#64748b' }} tickLine={false} />
-              <Tooltip contentStyle={{ background: '#111827', border: '1px solid rgba(0,217,255,0.3)', borderRadius: 8, fontSize: 10 }} />
-              <Line type="monotone" dataKey="value" stroke="#00D9FF" strokeWidth={2} dot={{ fill: '#00D9FF', r: 2 }} activeDot={{ r: 4, fill: '#FF4444' }} />
+              <Tooltip contentStyle={{ background: '#2c2f82', border: '1px solid rgba(0,217,255,0.3)', borderRadius: 8, fontSize: 10 }} />
+              <Line type="monotone" dataKey="value" stroke="#ff004c" strokeWidth={2} dot={{ fill: '#ff0044', r: 2 }} activeDot={{ r: 4, fill: '#FF4444' }} />
             </LineChart>
           </ResponsiveContainer>
         </ChartCard>
